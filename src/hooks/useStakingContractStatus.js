@@ -13,6 +13,22 @@ export function useStakingContractStatus(refresh) {
         totalEthRewarded_14: 0,       // Sum of totalRewards
         totalStakedAmount_14: 0,      // totalSharesDeposited of contract
         stakedAmountPerUser_14: 0,    // staked amount per user
+        stakedTimePerUser_14: 0,      // staked time per user
+        unClaimed_14: 0,              // getUnpaid of stakingcontract_14
+        tokenRewarded_14: 0,          // RewardOf read function of TokenStakingPool contract
+        totalEthRewarded_28: 0,       // Sum of totalRewards
+        totalStakedAmount_28: 0,      // totalSharesDeposited of contract
+        stakedAmountPerUser_28: 0,    // staked amount per user
+        stakedTimePerUser_28: 0,      // staked time per user
+        unClaimed_28: 0,              // getUnpaid of stakingcontract_28
+        tokenRewarded_28: 0,          // RewardOf read function of TokenStakingPool contract
+        totalEthRewarded_56: 0,       // Sum of totalRewards
+        totalStakedAmount_56: 0,      // totalSharesDeposited of contract
+        stakedAmountPerUser_56: 0,    // staked amount per user
+        stakedTimePerUser_56: 0,      // staked time per user
+        unClaimed_56: 0,              // getUnpaid of stakingcontract_56
+        tokenRewarded_56: 0,          // RewardOf read function of TokenStakingPool contract
+        ethBalance: 0,
         allowance: 0
     })
     const { address } = useAccount();

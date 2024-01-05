@@ -13,6 +13,22 @@ export const ConnectWallet = (props) => {
                 mounted,
             }) => {
                 // Note: If your app doesn't use authentication, you
+                // can remove all 'authenticationStatus' checks
+                const ready = mounted && authenticationStatus !== 'loading';
+                const connected =
+                    ready &&
+                    account &&
+                    chain &&
+                    (!authenticationStatus ||
+                        authenticationStatus === 'authenticated');
+                props.setWalletConnected(connected)
+                return (
+                    <div className='w-full'
+                        {...(!ready && {
+                            'aria-hidden': true,
+                            'style': {
+                                opacity: 0,
+                                pointerEvents: 'none',
                                 userSelect: 'none',
                             },
                         })}

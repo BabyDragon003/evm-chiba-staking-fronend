@@ -14,6 +14,22 @@ import { getDefaultGas } from "../utils/utils"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
+const StakingOptionModal = (props) => {
+    const [open, setOpen] = useState(false)
+    const [modalOption, setModalOption] = useState(props.stakeModalOption);
+    const [stakeAmount, setStakeAmount] = useState();
+    // const [approved, setApproved] = useState(true);
+    const [btnMsg, setBtnMsg] = useState("Stake");
+    const [errMsg, setErrMsg] = useState(false);
+    const [pending, setPending] = useState(false);
+    // const [btnDisabled, setBtnDisabled] = useState(false);
+
+    const cancelButtonRef = useRef(null)
+
+    const chibaTokenContractAddress = global.CHIBA_TOKEN.address;
+    const stakingContractAddress = global.STAKING_CONTRACTS;
+    const ChibaDecimals = global.CHIBA_TOKEN.decimals;
+
     let dataStaking = {
         chainId: global.chain.id,
     }

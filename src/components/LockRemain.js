@@ -18,27 +18,6 @@ const LockRemain = ({stakedTimePerUser, type}) => {
             setDay(Math.floor(temp / 86400));
             temp = temp - day * 86400;
             setHour(Math.floor(temp / 3600));
-            temp = temp - hour * 3600;
-            setMin(Math.floor(temp / 60));
-            setSec(Math.floor(temp % 60));
-        }
-    }
-
-    useEffect(() => {
-        const timerID = setInterval(() => {
-            setRefetch((prevData) => {
-                return !prevData;
-            })
-        }, global.REFETCH_SECOND);
-
-        return () => {
-            clearInterval(timerID);
-        };
-    }, []);
-
-    useEffect(() => {
-        getUpdateTime();
-    }, [refetch]);
 
     return (
         <div className="flex flex-col">

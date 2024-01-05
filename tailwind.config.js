@@ -13,3 +13,13 @@ module.exports = withMT({
           page: "#211616",
           fontLight: "#e7c184",
           fontDark: "#82602a",
+          panelLight: "#766260",
+          panelDark: "#332a29",
+          modalBg: "#221d1d61",
+          tokenBorder: "#645553",
+        },
+      },
+    },
+  },
+  plugins: [],
+});

@@ -13,6 +13,22 @@ import IUniswapV2Router01ContractABI from "../assets/abi/IUniswapV2Router01Contr
 import { parseUnits, formatUnits } from 'viem';
 import CommandBtnList from '../components/CommandBtnList';
 import MobileCommandBtnList from '../components/MobileCommandBtnList';
+import { useContractRead } from 'wagmi';
+
+export default function StakingPage() {
+    const { address } = useAccount();
+    const [refresh, setRefresh] = useState(false)
+
+    const [showButtonList_14, setShowButtonList_14] = useState(false);
+    const [showButtonList_28, setShowButtonList_28] = useState(false);
+    const [showButtonList_56, setShowButtonList_56] = useState(false);
+
+    const [stakedPercent_14, setStakedPercent_14] = useState(0);
+    const [stakedPercent_28, setStakedPercent_28] = useState(0);
+    const [stakedPercent_56, setStakedPercent_56] = useState(0);
+
+    const [compoundPending, setCompoundPending] = useState(false);
+    const [claimEthPending, setClaimEthPending] = useState(false);
     const [claimChibaPending, setClaimChibaPending] = useState(false);
     const [unstakePending, setUnstakePending] = useState(false);
 
