@@ -23,32 +23,6 @@ const CommandBtnList = (props) => {
                         data = {
                             ...data,
                             address: stakingContractAddress,
-                            abi: StakingContractABI,
-                            functionName: 'claimReward',
-                            args: [0, true, parseUnits((props._minTokensToReceive1 * 0.95).toString(), global.CHIBA_TOKEN.decimals)]
-                        }
-                    } else if (props._minTokensToReceive1 <= 0) {
-                        toast.warn("Warning! There are not ETH Rewards!");
-                        props.setCompoundPending(false)
-                        props.setShowButtonList_14(false);
-                        props.setShowButtonList_28(false);
-                        props.setShowButtonList_56(false);
-                        return
-                    }
-                }
-                if (poolOption === 28) {
-                    if (props.stakedAmountPerUser_28 > 0 && props._minTokensToReceive2 > 0) {
-                        data = {
-                            ...data,
-                            address: stakingContractAddress,
-                            abi: StakingContractABI,
-                            functionName: 'claimReward',
-                            args: [1, true, parseUnits((props._minTokensToReceive2 * 0.95).toString(), global.CHIBA_TOKEN.decimals)]
-                        }
-                    } else if (props._minTokensToReceive2 <= 0) {
-                        toast.warn("Warning! There are not ETH Rewards!");
-                        props.setCompoundPending(false)
-                        props.setShowButtonList_14(false);
                         props.setShowButtonList_28(false);
                         props.setShowButtonList_56(false);
                         return
