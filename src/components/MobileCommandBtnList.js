@@ -1,4 +1,3 @@
-import { global } from "../config/global";
 import StakingContractABI from "../assets/abi/stakingContract.json";
 import tokenStakingContractABI from "../assets/abi/tokenStakingContract.json";
 import { parseUnits } from "viem";

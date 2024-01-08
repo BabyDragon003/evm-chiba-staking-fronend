@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import chibaIco from "../assets/img/chiba.png";
@@ -23,6 +22,32 @@ const StakingOptionModal = (props) => {
     const [errMsg, setErrMsg] = useState(false);
     const [pending, setPending] = useState(false);
     // const [btnDisabled, setBtnDisabled] = useState(false);
+
+    const cancelButtonRef = useRef(null)
+
+    const chibaTokenContractAddress = global.CHIBA_TOKEN.address;
+    const stakingContractAddress = global.STAKING_CONTRACTS;
+    const ChibaDecimals = global.CHIBA_TOKEN.decimals;
+
+    let dataStaking = {
+        chainId: global.chain.id,
+    }
+
+    useEffect(() => {
+        setOpen(props.showOpen);
+        // setModalOption()
+    }, [props.showOpen])
+
+    useEffect(() => {
+        if (!props) {
+            setBtnMsg("LOADING...")
+            setErrMsg("Please wait! Loading...")
+            return
+        }
+        if (pending) {
+            setBtnMsg("Pending ")
+            setErrMsg("Please wait! Pending...")
+            return
         }
         if (props.ethBalance < getDefaultGas()) {
             setBtnMsg("Insufficient ETH")

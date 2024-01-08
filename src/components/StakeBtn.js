@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 
 // import { ConnectWallet } from "./ConnectWallet";

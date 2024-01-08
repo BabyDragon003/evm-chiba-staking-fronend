@@ -1,1 +1,0 @@
-# chiba-staking-frontend

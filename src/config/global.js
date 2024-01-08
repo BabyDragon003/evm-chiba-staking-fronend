@@ -1,4 +1,3 @@
-import { mainnet, goerli } from "wagmi/chains";
 import chiba_ic from "../assets/img/chiba.png"
 
 export const IS_PRODUCT_MODE = false // TODO

@@ -1,4 +1,3 @@
-import './index.css'
 import React, { useState, useEffect, useRef } from "react";
 import { useStakingContractStatus } from "../hooks/useStakingContractStatus"
 import StakeBtn from "../components/StakeBtn";

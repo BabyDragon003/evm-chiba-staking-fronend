@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import StakingContractABI from "../assets/abi/stakingContract.json";
 import tokenStakingContractABI from "../assets/abi/tokenStakingContract.json";
 import chibaTokenContractABI from "../assets/abi/chibaTokenContract.json";
