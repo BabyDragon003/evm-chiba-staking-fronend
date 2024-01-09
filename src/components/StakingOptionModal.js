@@ -1,13 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import chibaIco from "../assets/img/chiba.png";
 import clsx from 'clsx';
-import { global } from "../config/global";
-import { parseUnits } from 'viem';
-import { writeContract, prepareWriteContract, waitForTransaction } from "@wagmi/core"
-import { toast } from "react-toastify";
-import StakingContractABI from "../assets/abi/stakingContract.json";
-import chibaTokenContractABI from "../assets/abi/chibaTokenContract.json";
 import { staticConfig } from "../components/static";
 import { getDefaultGas } from "../utils/utils"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

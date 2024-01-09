@@ -1,3 +1,4 @@
+import { global } from "../config/global";
 
 export const trimAddress = (addr) => {
     return `${addr.substring(0, 7)}...${addr.substring(addr.length - 5)}`;

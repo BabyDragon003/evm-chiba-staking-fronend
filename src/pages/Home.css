@@ -1,13 +1,8 @@
+@charset "UTF-8";*,:before,:after {
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
     border-color: #e5e5e5
-}
-
-:before,:after {
-    --tw-content: ""
-}
-
 html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
