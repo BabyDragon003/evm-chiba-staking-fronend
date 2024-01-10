@@ -8,17 +8,6 @@ const LockRemain = ({stakedTimePerUser, type}) => {
     const [sec, setSec] = useState(0);
 
     const [refetch, setRefetch] = useState (false)
-
-    const getUpdateTime = () => {
-        var d1 = new Date();
-        const currentTime = Math.floor(d1.getTime() / 1000);
-        const periodTime = (86400 * type) + stakedTimePerUser - currentTime;
-        if (periodTime > 0) {
-            let temp = periodTime;
-            setDay(Math.floor(temp / 86400));
-            temp = temp - day * 86400;
-            setHour(Math.floor(temp / 3600));
-            temp = temp - hour * 3600;
             setMin(Math.floor(temp / 60));
             setSec(Math.floor(temp % 60));
         }

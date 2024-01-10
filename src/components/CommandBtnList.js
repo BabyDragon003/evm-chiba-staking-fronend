@@ -3,16 +3,11 @@ import StakingContractABI from "../assets/abi/stakingContract.json";
 import tokenStakingContractABI from "../assets/abi/tokenStakingContract.json";
 import { parseUnits } from "viem";
 import { writeContract, prepareWriteContract, waitForTransaction } from "@wagmi/core"
-    const tokenStakingContractAddress = global.STAKING_EXTENSION_CONTRACTS;
+import { toast } from "react-toastify"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-    let data = {
-        chainId: global.chain.id,
-    }
-    const handleCompoundAndRelock = async (compound, poolOption) => {
-        try {
-            if (compound) {
-                props.setCompoundPending(true)
-                if (poolOption === 14) {
+const CommandBtnList = (props) => {
                     if (props.stakedAmountPerUser_14 > 0 && props._minTokensToReceive1 > 0) {
                         data = {
                             ...data,

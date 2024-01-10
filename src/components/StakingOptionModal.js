@@ -3,16 +3,11 @@ import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import chibaIco from "../assets/img/chiba.png";
 import clsx from 'clsx';
-import { staticConfig } from "../components/static";
-import { getDefaultGas } from "../utils/utils"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-
-const StakingOptionModal = (props) => {
-    const [open, setOpen] = useState(false)
-    const [modalOption, setModalOption] = useState(props.stakeModalOption);
-    const [stakeAmount, setStakeAmount] = useState();
-    // const [approved, setApproved] = useState(true);
+import { global } from "../config/global";
+import { parseUnits } from 'viem';
+import { writeContract, prepareWriteContract, waitForTransaction } from "@wagmi/core"
+import { toast } from "react-toastify";
+import StakingContractABI from "../assets/abi/stakingContract.json";
     const [btnMsg, setBtnMsg] = useState("Stake");
     const [errMsg, setErrMsg] = useState(false);
     const [pending, setPending] = useState(false);

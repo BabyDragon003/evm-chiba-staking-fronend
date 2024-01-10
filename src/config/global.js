@@ -8,17 +8,6 @@ export const staking_contract_address = { // TODO ethereum Mainnet
     testnet: "0xCe61652B4e49A5D6eDDFEC8b6ddC551A96F99292",
 };
 
-export const token_staking_contract_address = { // TODO ethereum Mainnet
-    mainnet: "",
-    testnet: "0x12b85c2683E4fB4535be30f48AC7bA2C184569d6",
-};
-
-export const chibaToken_mainnet = {
-    name: 'CHIBA',
-    address: '',
-    decimals: 9,
-    logo: chiba_ic,
-    isNative: true
 }
 
 export const chibaToken_testnet = {

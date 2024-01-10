@@ -3,6 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { useStakingContractStatus } from "../hooks/useStakingContractStatus"
 import StakeBtn from "../components/StakeBtn";
 import LockRemain from "../components/LockRemain";
+import { ConnectWallet } from "../components/ConnectWallet";
+import ethIco from "../assets/img/eth.png"
+import chibaIco from "../assets/img/chiba.png"
+import giftIco from "../assets/img/gift.png"
+import { global } from '../config/global';
+import { useAccount } from "wagmi";
 import IUniswapV2Router01ContractABI from "../assets/abi/IUniswapV2Router01ContractABI.json";
 import { parseUnits, formatUnits } from 'viem';
 import CommandBtnList from '../components/CommandBtnList';

@@ -3,6 +3,12 @@ import StakingContractABI from "../assets/abi/stakingContract.json";
 import tokenStakingContractABI from "../assets/abi/tokenStakingContract.json";
 import { parseUnits } from "viem";
 import { writeContract, prepareWriteContract, waitForTransaction } from "@wagmi/core"
+import { toast } from "react-toastify"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+
+const MobileCommandBtnList = (props) => {
+    const stakingContractAddress = global.STAKING_CONTRACTS;
     const tokenStakingContractAddress = global.STAKING_EXTENSION_CONTRACTS;
 
     let data = {

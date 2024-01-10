@@ -3,6 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./assets/css/style.css";
 
+import '@rainbow-me/rainbowkit/styles.css';
+import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+// import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from 'wagmi/providers/public';
+import { global } from "./config/global";
 import { staticConfig } from "./components/static";
 
 const WalletTheme = {

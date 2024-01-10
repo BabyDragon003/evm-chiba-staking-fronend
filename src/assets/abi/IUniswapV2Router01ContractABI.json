@@ -3,16 +3,11 @@
         "inputs": [
             {
                 "internalType": "address",
+                "name": "_factory",
                 "type": "address"
-            }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-    },
-    {
-        "inputs": [],
-        "name": "WETH",
-        "outputs": [
+            },
+            {
+                "internalType": "address",
             {
                 "internalType": "address",
                 "name": "",

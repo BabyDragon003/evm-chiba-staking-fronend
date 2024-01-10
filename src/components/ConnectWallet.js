@@ -3,6 +3,12 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 export const ConnectWallet = (props) => {
     return (
         <ConnectButton.Custom>
+            {({
+                account,
+                chain,
+                openAccountModal,
+                openChainModal,
+                openConnectModal,
                 authenticationStatus,
                 mounted,
             }) => {

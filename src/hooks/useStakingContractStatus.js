@@ -3,6 +3,12 @@ import StakingContractABI from "../assets/abi/stakingContract.json";
 import tokenStakingContractABI from "../assets/abi/tokenStakingContract.json";
 import chibaTokenContractABI from "../assets/abi/chibaTokenContract.json";
 import { useAccount } from "wagmi";
+import { multicall, fetchBalance } from '@wagmi/core';
+import { global } from "../config/global";
+import { formatUnits } from "viem";
+
+export function useStakingContractStatus(refresh) {
+    const [data, setData] = useState({
         walletBalance: 0,             // Amount of connected account's CHIBA tokens 
         totalEthRewarded_14: 0,       // Sum of totalRewards
         totalStakedAmount_14: 0,      // totalSharesDeposited of contract

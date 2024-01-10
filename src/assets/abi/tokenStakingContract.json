@@ -3,6 +3,12 @@
         "inputs": [
             {
                 "internalType": "address",
+                "name": "_mainPool",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IERC20",
+                "name": "_token",
                 "type": "address"
             },
             {
