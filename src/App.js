@@ -8,6 +8,17 @@ import StakingPage from "./pages/StakingPage";
 import '../src/pages/index.css';
 
 const renderLoader = () => (
+  <div className="w-full h-[calc(100vh-100px)] flex justify-center items-center bg-gradient-to-t from-blue-500 via-blue-300 to-blue-500">
+    <img src={'./image/loading.png'} alt="logo" className="animate-pulse w-10 h-10" />
+  </div>
+);
+
+function App() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setReady(true);
+  }, []);
 
   return (
     <>

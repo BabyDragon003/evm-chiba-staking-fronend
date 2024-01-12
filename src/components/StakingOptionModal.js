@@ -8,6 +8,17 @@ import { parseUnits } from 'viem';
 import { writeContract, prepareWriteContract, waitForTransaction } from "@wagmi/core"
 import { toast } from "react-toastify";
 import StakingContractABI from "../assets/abi/stakingContract.json";
+import chibaTokenContractABI from "../assets/abi/chibaTokenContract.json";
+import { staticConfig } from "../components/static";
+import { getDefaultGas } from "../utils/utils"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+
+const StakingOptionModal = (props) => {
+    const [open, setOpen] = useState(false)
+    const [modalOption, setModalOption] = useState(props.stakeModalOption);
+    const [stakeAmount, setStakeAmount] = useState();
+    // const [approved, setApproved] = useState(true);
     const [btnMsg, setBtnMsg] = useState("Stake");
     const [errMsg, setErrMsg] = useState(false);
     const [pending, setPending] = useState(false);

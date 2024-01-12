@@ -8,6 +8,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const CommandBtnList = (props) => {
+    const stakingContractAddress = global.STAKING_CONTRACTS;
+    const tokenStakingContractAddress = global.STAKING_EXTENSION_CONTRACTS;
+
+    let data = {
+        chainId: global.chain.id,
+    }
+    const handleCompoundAndRelock = async (compound, poolOption) => {
+        try {
+            if (compound) {
+                props.setCompoundPending(true)
+                if (poolOption === 14) {
                     if (props.stakedAmountPerUser_14 > 0 && props._minTokensToReceive1 > 0) {
                         data = {
                             ...data,
