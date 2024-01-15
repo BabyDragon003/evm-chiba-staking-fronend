@@ -23,6 +23,32 @@
                 "internalType": "address",
                 "name": "",
                 "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenA",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "tokenB",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountADesired",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountBDesired",
+                "type": "uint256"
             },
             {
                 "internalType": "uint256",
